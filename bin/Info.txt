@@ -1,0 +1,37 @@
+Create a Project
+There was an issue "no explicit encoding set"
+I right clicked and did quick fix to UTF-8, it resolved
+
+Download jar from "https://mvnrepository.com/artifact/com.mysql/mysql-connector-j"
+Then add it to our project
+Right Click -> Build Path -> Configure Build Path -> Libraries -> 
+Module Path -> Add external Jar -> Apply and OK 
+
+If I create project with module.java, then I need to add imports in that file, like require()
+
+DDL (Data Definition Language):
+	define the structure of a database and its objects.
+	CREATE, ALTER, DROP, TRUNCATE, and RENAME
+DML (Data Manipulation Language):
+	retrieve, insert, update, and delete data in tables
+	SELECT, INSERT, UPDATE, and DELETE.
+DCL (Data Control Language):
+	manage user permissions and access control within the database.
+	GRANT (to grant privileges) and REVOKE (to revoke privileges).
+TCL (Transaction Control Language):
+	manage transactions within the database.
+	COMMIT (to commit a transaction), 
+	ROLLBACK (to roll back a transaction), and 
+	SAVEPOINT (to set a save point within a transaction)
+DQL (Data Query Language):
+	subset of DML or as a separate category
+	WHERE, GROUP BY, HAVING, ORDER BY, LIMIT, OFFSET, JOIN, INNER JOIN, 
+	LEFT JOIN / RIGHT JOIN, FULL JOIN, UNION, INTERSECT, EXCEPT
+	
+							Load the JDBC Driver:
+							Create Connection URL:
+							Establish Connection:
+							Create Statement or PreparedStatement:
+							Execute SQL Queries:
+							Process Results (if applicable):
+							Close Resources:
