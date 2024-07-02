@@ -3,6 +3,7 @@ package com.sam.project.util;
 import static com.sam.UseCase.PASSWORD;
 import static com.sam.UseCase.URL;
 import static com.sam.UseCase.USERNAME;
+import static com.sam.UseCase.print;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,6 +13,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Objects;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
+
 public class DbConnectivity {
 	
 	private static Connection connection = null;
@@ -20,6 +23,13 @@ public class DbConnectivity {
 	private static Connection getConnection() throws SQLException {
 		if (Objects.isNull(connection)) {
 			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+
+			/* Another way of creating connection */
+			MysqlDataSource dataSource = new MysqlDataSource();
+			dataSource.setURL(URL);
+			dataSource.setUser(USERNAME);
+			dataSource.setPassword(PASSWORD);
+			print(dataSource.getConnection());
 		}
 		return connection;
 	}

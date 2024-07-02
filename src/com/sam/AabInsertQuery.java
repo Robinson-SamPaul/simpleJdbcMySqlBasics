@@ -30,7 +30,7 @@ public class AabInsertQuery {
 		
 		print(resultSet);  // result set is open
 		int count = statement.executeUpdate(query);  // result will be closed
-		print(count);
+		print(count); // The number of rows affected by the update
 		print(resultSet);
 		
 		close(connection, statement, resultSet);
